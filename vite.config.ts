@@ -1,8 +1,16 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  envDir: './env',
+  envDir: './',   // was './env
   plugins: [react()],
+  server: {
+    open: true,
+  },
+  build: {
+    rollupOptions: {
+      // Ensures the app falls back to `index.html` for unknown routes
+      input: 'index.html',
+    },
+  },
 });
