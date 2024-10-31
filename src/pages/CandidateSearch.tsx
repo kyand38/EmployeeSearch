@@ -23,7 +23,7 @@ const CandidateSearch = () => {
     };
     fetchCandidates();
   }, []);
-
+// gets the details needed using the searchGitHubUser function/api call
   useEffect(() => {
     const fetchCandidateDetails = async () => {
       const candidate = candidatesList[index];
@@ -42,7 +42,7 @@ const CandidateSearch = () => {
 
   // Handle save candidate
   const handleSave = () => {
-    // const candidate = candidatesList[index];
+    // let candidate = candidatesList[index];
     const savedCandidates = JSON.parse(localStorage.getItem('savedCandidates') || '[]');
     localStorage.setItem('savedCandidates', JSON.stringify([...savedCandidates, currentCandidate]));
     handleNext();
