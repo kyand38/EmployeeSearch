@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import { searchGithub, searchGithubUser } from '../api/API';
 import Candidate from '../interfaces/Candidate.interface';
 import Card from '../components/Card';
-import SavedCandidates from './SavedCandidates';
+import __SavedCandidates from './SavedCandidates';
 
 const CandidateSearch = () => {
   // Create a state variable to hold the list of candidates retrieved from GitHub.
   const [candidatesList, setCandidatesList] = useState<Candidate[]>([]);
   const [currentCandidate, setCurrentCandidate] = useState<Candidate | null>(null);
   const [index, setIndex] = useState(0);
-  const [error, setError] = useState<string | null>(null);
+  const [__error, setError] = useState<string | null>(null);
 
   // Fetch candidates on component mount
   useEffect(() => {
