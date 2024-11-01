@@ -33,7 +33,10 @@ As always Benicio, my tutor, was a huge help.
 This application is covered under the following license: [MIT License](https://www.gnu.org/licenses/gpl-3.0)
 
 ## Features
-View candidate profiles with essential information: name, location, email, and more.Add candidates to a saved list for easy access and review.Persisted data ensures that saved candidates remain available after page reloads.User-friendly navigation to browse through candidate profiles efficiently.
+ - View candidate profiles with essential information: name, location, email, and more.  
+ - Add candidates to a saved list for easy access and review.
+ - Persisted data ensures that saved candidates remain available after page reloads.  
+ - User-friendly navigation to browse through candidate profiles efficiently.
 
 ## Questions
  - https://github.com/kyand38
