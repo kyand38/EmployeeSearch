@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { searchGithub, searchGithubUser } from '../api/API';
 import Candidate from '../interfaces/Candidate.interface';
-import Card from '../components/card';
+import Card from '../components/Card';
 import SavedCandidates from './SavedCandidates';
 
 const CandidateSearch = () => {

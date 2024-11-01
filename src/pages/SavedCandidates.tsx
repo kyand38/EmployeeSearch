@@ -1,5 +1,6 @@
 import Candidate from '../interfaces/Candidate.interface';
 import { useState } from 'react';
+import '../styles/savedCandidates.css'
 
 // Getting candidates from local storage
 const SavedCandidates = () => {
@@ -7,7 +8,7 @@ const SavedCandidates = () => {
     return JSON.parse(localStorage.getItem('savedCandidates') || '[]');
   });
   console.log("Over here!", candidatesArray);
-  
+
 // Function to delete candidates form table
   const handleDelete = (id: number) => {
     const updatedList = candidatesArray.filter(candidate => candidate.id !== id);
@@ -27,7 +28,7 @@ const SavedCandidates = () => {
             <th>Email</th>
             <th>Company</th>
             <th>Bio</th>
-            <th>Actions</th>
+            <th>Remove</th>
           </tr>
         </thead>
         <tbody>
@@ -35,13 +36,13 @@ const SavedCandidates = () => {
             { console.log('help!!!!!', candidate) }
             return (
               <tr key="">
-                <td><img src={candidate.avatar_url || 'No image'} style={{ width: '40px' }}></img></td>
+                <td><img className='avatarImg' src={candidate.avatar_url || 'No image'} style={{ width: '7vh' }}></img></td>
                 <td>{candidate.login}</td>
                 <td>{candidate.location || 'No location'}</td>
-                <td>{candidate.email || 'no email'}</td>
+                <td><a href={candidate.email}>{candidate.email || 'No Email'}</a></td>
                 <td>{candidate.company || 'No company'}</td>
                 <td>{candidate.bio || 'No bio'}</td>
-                <td><button onClick={() => handleDelete(candidate.id)}>-</button></td>
+                <td><button className='removeButton' onClick={() => handleDelete(candidate.id)}>-</button></td>
               </tr>)
           })}
         </tbody>

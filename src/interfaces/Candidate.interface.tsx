@@ -2,11 +2,11 @@
 interface Candidate {
     login: string;
     id: number;
-    name: string;
-    location: string;
-    bio: string;
-    company: string;
-    email: string;
+    name?: string;
+    location?: string;
+    bio?: string;
+    company?: string;
+    email?: string;
     avatar_url: string;
 }
  export default Candidate;
